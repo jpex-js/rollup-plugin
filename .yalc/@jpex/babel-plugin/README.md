@@ -1,18 +1,12 @@
-# @jpex/rollup-plugin
-Rollup plugin for jpex
+# babel
+Babel plugin for jpex
 
 ## usage
+Jpex uses a babel plugin to infer type interfaces. Your babel config should look something like this:
 ```js
-// rollup.config.js
-import typescript from 'rollup-plugin-typescript2';
-import jpex from '@jpex/rollup-plugin';
-
 {
-  // ...
-  plugins: [
-    jpex(opts),
-    typescript()
-  ]
+  presets: [ '@babel/preset-typescript' ],
+  plugins: [ 'jpex/babel-plugin' ]
 }
 ```
 
@@ -21,7 +15,7 @@ import jpex from '@jpex/rollup-plugin';
 ```ts
 string | string[]
 ```
-The variable name of your `jpex` instance that the plugin should look for. By default it is just `jpex`.
+The variable name of your `jpex` instance that the babel plugin should look for. By default it is just `jpex`.
 
 For example in your app you may have something like:
 
