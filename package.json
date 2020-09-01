@@ -1,0 +1,47 @@
+{
+  "name": "@jpex/rollup-plugin",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "git@github.com:jpex-js/rollup-plugin.git",
+  "author": "Jack Ellis <jack.ellis@godaddy.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn build && BABEL_DISABLE_CACHE=1 ava",
+    "test:debug": "ava debug",
+    "coverage": "nyc ava",
+    "lint": "eslint './src/**/*.ts' && tsc --noEmit",
+    "build:prepare": "rm -rf dist",
+    "build:js": "rollup --config ./rollup.config.js",
+    "build": "yarn build:prepare && yarn build:js",
+    "prepublishOnly": "yarn build"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/register": "^7.11.5",
+    "@commitlint/config-conventional": "^9.1.2",
+    "@team-griffin/eslint-config": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "ava": "^3.12.1",
+    "eslint": "^7.8.0",
+    "jpex": "file:.yalc/jpex",
+    "rollup": "^2.26.8",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@babel/plugin-syntax-typescript": "^7.10.4",
+    "@jpex/babel-plugin": "file:.yalc/@jpex/babel-plugin",
+    "rollup-plugin-babel": "^4.4.0"
+  },
+  "resolutions": {
+    "@jpex/babel-plugin": "file:.yalc/@jpex/babel-plugin"
+  }
+}
