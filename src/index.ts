@@ -7,7 +7,7 @@ export default (options: any) => babel({
   plugins: [
     '@babel/plugin-syntax-typescript',
     [
-      '@jpex/babel-plugin',
+      '@jpex-js/babel-plugin',
       options,
     ],
   ],

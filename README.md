@@ -5,7 +5,7 @@ Rollup plugin for jpex
 ```js
 // rollup.config.js
 import typescript from 'rollup-plugin-typescript2';
-import jpex from '@jpex/rollup-plugin';
+import jpex from '@jpex-js/rollup-plugin';
 
 {
   // ...
