@@ -1,5 +1,5 @@
 {
-  "name": "@jpex/rollup-plugin",
+  "name": "@jpex-js/rollup-plugin",
   "version": "1.0.0",
   "main": "dist/index.js",
   "publishConfig": {
